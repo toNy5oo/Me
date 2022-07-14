@@ -1,8 +1,7 @@
-MDB5
-Version: FREE 4.3.0
+## My own personal Porfolio Website
 
-Documentation:
-https://mdbootstrap.com/docs/standard/
-
-Contact:
-office@mdbootstrap.com
+### Tech
+HTML
+CSS
+JS
+MDB - https://mdbootstrap.com/
