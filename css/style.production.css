@@ -1,0 +1,555 @@
+/* __________________________________________________________________________________
+
+                                NEW CSS
+__________________________________________________________________________________ */
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #008080;
+    --dark-grey: #ee1a1a;
+    --bg-header: #ffedce;
+    --link-color: #fa0;
+    --link_hover-opacity_reduction: 0.8;
+    --link_visited_color: #444;
+    --link_active_color: #fc0000;
+    --grid_background-color: #aaa;
+    --button_bg-color: #fff;
+    --black: #000;
+    --white: #fff;
+    --grey: #ddd;
+    --big-font: clamp(2rem, 10vw, 2.8rem);
+    --medium-font: clamp(1.7rem, 6vw, 2.4rem);
+    --small-font: clamp(1.5rem, 4.5vw, 1.8rem);
+    --extra-small-font: clamp(1.4rem, 3vw, 1.6rem);
+    --h5-small-font: clamp(1.2rem, 2vw, 1.4rem);
+    --padding_small: 1rem;
+    --padding_medium: 2rem;
+    --padding_big: 2rem;
+    --padding_extra_big: 3rem;
+    --box_shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
+}
+
+/* _________________ C O M M O N S __________________ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: var(--extra-small-font);
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: var(--big-font);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--medium-font);
+    font-weight: 400;
+}
+
+h3 {
+    font-size: var(--small-font);
+    font-weight: 300;
+}
+
+h4 {
+    font-size: var(--extra-small-font);
+    font-weight: 300;
+}
+
+h5 {
+    font-size: var(--h5-small-font);
+    font-weight: 300;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* visited link
+a:visited {
+    color: var(--link_visited_color);
+
+}
+
+/* selected link
+a:active {
+    color: var(--link_active_color);
+}
+*/
+
+input,
+textarea,
+select,
+button {
+    font-family: system-ui;
+}
+
+button:hover,
+button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+
+    /* reduces the opacity of the button to 80% */
+    opacity: var(--link_hover-opacity_reduction);
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+
+    /* reduces the opacity of the button to 80% */
+    opacity: var(--link_hover-opacity_reduction);
+}
+
+.button-81 {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-81:hover {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .button-81 {
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+    }
+}
+
+.navigation-list__item {
+    color: var(--primary-color);
+}
+
+.--active {
+    color: var(--secondary-color);
+}
+
+.navigation-list__item::before,
+.navigation-list__item::after
+ {
+    content:"";
+    border: 1px solid var(--secondary-color);
+    display: block;
+    transform: scale(1, 0);
+    position: relative;
+    font-size: 1em;
+}
+
+.navigation-list__item:hover::before,
+.navigation-list__item:hover::after {
+    transform: scale(1, 1);
+    transition: transform ease-in-out 200ms;  
+}
+
+
+/* .navigation-list__item--active,
+.navigation-list__item--active:visited {
+    border: 2px solid rgb(85, 140, 156);
+    color: rgb(85, 140, 156);
+    font-weight: bold;
+    padding: 0.4rem 0.6rem;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+
+.navigation-list__item,
+.navigation-list__item-:visited {
+    color: rgb(17, 17, 17);
+    padding: 0.4rem 0.6rem;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+
+.navigation-list__item:focus,
+.navigation-list__item:hover {
+    border: 2px solid rgb(85, 140, 156);
+    background-color: rgb(85, 140, 156);
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+.navigation-list__item--active:focus,
+.navigation-list__item--active:hover {
+    
+}
+
+a.navigation-list__item,
+a.navigation-list__item--active {
+    transition: all 0.35s;
+} */
+
+/* Removing padding for not showing the dot next to each entry */
+
+ul {
+    margin: 0;
+    padding: 1rem 0;
+}
+
+/* ==============================================================
+
+                I N D E X   P A G E
+
+=============================================================== */
+
+/* ---------------- INDEX HEADER */
+
+.header {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: var(--box_shadow);
+    justify-content: center;
+    text-align: center;
+}
+
+.header__item:first-child {
+    margin: 2vh 1vh;
+    width: clamp(10rem, 15rem, 20rem);
+}
+
+.navigation-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    text-transform: uppercase;
+}
+
+.navigation-list li {
+    font-size: clamp(1rem, 0.8em, 2rem);
+}
+
+/* ---------------- INDEX MAIN */
+
+.main {
+    display: block;
+}
+
+.main__item {
+    text-align: center;
+}
+
+.main_item--img {
+    margin-top: 1em;
+    width: clamp(5rem, 50vw, 15rem);
+    height: clamp(5rem, 50vw, 15rem);
+    border-radius: 50%;
+}
+
+/* ----------------INDEX QUERY */
+
+@media all and (min-width: 541px) {
+    .header {
+        display: grid;
+
+        /*The minmax() CSS function defines a size range greater than or equal 
+        to min and less than or equal to max. It is used with CSS Grids.*/
+        grid-template-columns: minmax(10px, 0.5fr) 1.5fr 4fr minmax(10px, 0.5fr);
+        justify-content: flex-end;
+        align-items: center;
+        padding: var(--padding_big);
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+    }
+
+    .navigation-list {
+        grid-column: 3 / 4;
+        justify-content: flex-end;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+        padding: 5em 3em;
+        align-items: center;
+    }
+}
+
+/* ==============================================================
+
+                W O R K   P A G E
+
+=============================================================== */
+
+.projects__grid {
+    display: block;
+    padding: var(--padding_small);
+}
+
+.projects__grid--item {
+    box-shadow: var(--box_shadow);
+    text-align: center;
+    padding: 2rem 3rem;
+}
+
+.projects__grid--item > h3 {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.projects__grid--item > a {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+@media all and (min-width: 540px) {
+    @supports (display: grid) {
+        .projects__grid {
+            display: grid;
+            grid-template-columns: 27% 27% 27%;
+            justify-content: center;
+            grid-gap: 1rem;
+        }
+
+        .projects__grid--item {
+            padding: var(--padding_medium);
+        }
+
+        .projects__grid--item > a {
+            font-size: 1.2rem;
+            align-self: flex-end;
+        }
+
+        .projects__grid--item > p {
+            font-size: 2.5ch;
+            align-self: center;
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+@media all and (min-width: 540px) and (max-width: 1024px) {
+    .projects__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==============================================================
+
+                C O N T A C T S   P A G E
+
+=============================================================== */
+
+.contacts__heading {
+    padding: var(--padding_small);
+    text-align: center;
+}
+
+.contacts__container {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.contacts__container--item:first-child {
+    display: block;
+    text-align: center;
+}
+
+.contacts__container--item:last-child {
+    display: inline-block;
+    padding-top: 2rem;
+}
+
+.button__padding {
+    padding: 3rem 0;
+}
+
+.icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    text-decoration: none;
+}
+
+.contacts__container--item:last-child > a {
+    padding: 2rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0.13rem solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.contacts__table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (min-width: 765px) {
+    input,
+    textarea {
+        width: 25rem;
+    }
+}
+
+/* ==============================================================
+
+                A B O U T    P A G E
+
+=============================================================== */
+
+/* ---------------- MAIN  */
+
+.about_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.about_container--header {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about__container--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.about__container--item > h3 {
+    padding-top: 1rem;
+}
+
+/* ==============================================================
+
+                        F O O T E R
+
+=============================================================== */
+
+.footer {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer__social-media > a {
+    padding: 1rem;
+}
+
+/* A N I M A T I O N S  */
+
+.rome_skyline_container {
+    display: block;
+    padding: 3rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.rome_skyline_container {
+    display: none;
+}
+
+/*
+@media all and (min-width: 768px) {
+   img.city {
+        width: 50%;
+    }
+
+    img.balloon_red {
+        display: block;
+        position: relative;
+        bottom: 500px;
+        left: 550px;
+        width: auto;
+    }
+
+    img.balloon_black {
+        display: block;
+        position: relative;
+        bottom: 650px;
+        left: 900px;
+        width: auto;
+    }
+
+    .balloon_black {
+        display: none;
+    }
+
+    .balloon_black {
+        animation: 15s black_balloon_moving infinite alternate linear;
+    }
+
+    .balloon_red {
+        animation: 10s red_balloon_moving infinite alternate linear;
+    }
+
+    @keyframes red_balloon_moving {
+        from {
+            transform: translate(0, 100px);
+        }
+
+        to {
+            transform: translate(200px, 100px);
+        }
+    }
+
+    @keyframes black_balloon_moving {
+        from {
+            transform: translate(200px, 100px);
+        }
+
+        to {
+            transform: translate(0, 100px);
+        }
+    }
+}
+
+*/
