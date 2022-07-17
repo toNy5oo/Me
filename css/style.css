@@ -2,6 +2,23 @@
     font-family: 'Share Tech Mono', monospace;
 }
 
+#intro {
+    background-image: url("../img/developer_bg.jpg");
+    height: 100vh;
+  }
+
+  /* Height for devices larger than 576px */
+  @media (min-width: 992px) {
+    #intro {
+      margin-top: -58.59px;
+    }
+  }
+
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+
+  /* SIDEBAR */
 /* width */
 ::-webkit-scrollbar {
     width: 0.2rem;
@@ -21,3 +38,22 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  .fab{
+      color: whitesmoke;
+  }
+
+  .selfie{
+      max-height: 16rem;
+  }
+
+  .card-body{
+      background-color: rgb(104, 104, 104);
+  }
+
+  .card:hover{
+    transform: scale(1.05);
+    opacity: 1;
+    z-index: 999;
+    transition: transform 250ms;
+    }
