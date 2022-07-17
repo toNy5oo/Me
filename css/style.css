@@ -1,0 +1,23 @@
+*{
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #313131;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(189, 189, 189);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

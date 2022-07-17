@@ -6,8 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicons/portfolio.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
   <link rel="stylesheet" href="./css/mdb.min.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Portfolio</title>
 </head>
 
@@ -37,11 +45,21 @@
       <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand nav-link" target="_blank" href="#">
-          {ciro_bozza[dev]}
+          { <span style="color: rgb(50, 144, 187)">ciro_bozza</span>[<span style="color: rgb(212, 133, 41)">dev</span>]
+          }
         </a>
 
 
         <ul class="navbar-nav d-flex flex-row">
+          <!-- Text -->
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#projects" rel="nofollow">[ Work ]
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://www.linkedin.com/in/tony-bozza-0128b2232/" rel="nofollow" target="_blank">
+            </a>
+          </li>
           <!-- Icons -->
           <li class="nav-item me-3 me-lg-0">
             <a class="nav-link" href="https://www.linkedin.com/in/tony-bozza-0128b2232/" rel="nofollow" target="_blank">
@@ -66,7 +84,7 @@
           <div class="text-white">
             <h1 class="mb-3">Welcome to my portfolio</h1>
             <h5 class="mb-4 fst-italic">"All I know is that I know nothing." - Socrates -</h5>
-            <a class="btn btn-outline-light btn-lg m-2" href="#" role="button" rel="nofollow" target="_blank">Contact
+            <a class="btn btn-outline-light btn-lg m-2" href="#contact" role="button" rel="nofollow">Contact
               me</a>
             <a class="btn btn-outline-light btn-lg m-2" href="https://github.com/toNy5oo?tab=repositories"
               target="_blank" role="button">Check out my Github</a>
@@ -88,7 +106,7 @@
             <img src="./img/selfie.jpg" class="img-fluid" style="height: 40vh; border-radius: 50%;" />
           </div>
 
-          <div class="col-md-8 gx-5 mb-4 text-center">
+          <div class="col-md-8 gx-5 my-auto text-center">
             <h4><strong>To be or not to be</strong></h4>
             <p class="text-muted">
               Being a web developer nowadays is a challenge more than ever. With technology improving daily, offering
@@ -110,7 +128,7 @@
       <hr class="my-5" />
 
       <!--Section: Content-->
-      <section class="text-center">
+      <section id="projects" class="text-center">
         <h4 class="mb-5"><strong>Some of my projects</strong></h4>
 
         <div class="row">
@@ -187,7 +205,7 @@
       <hr class="my-5" />
 
       <!--Section: Content-->
-      <section class="mb-5">
+      <section class="mb-5" id="contact">
         <h4 class="mb-5 text-center"><strong>Get in touch</strong></h4>
 
         <div class="row d-flex justify-content-center">
