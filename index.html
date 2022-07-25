@@ -15,6 +15,7 @@
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/mdb.dark.min.css">
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Portfolio</title>
 </head>
 
@@ -27,16 +28,17 @@
             <div class="container-fluid">
                 <!-- Navbar brand -->
                 <a class="navbar-brand nav-link" target="_blank" href="#">
-          { <span style="color: rgb(50, 144, 187)">ciro_bozza</span>[<span style="color: rgb(212, 133, 41)">dev</span>]
-          }
-        </a>
+                    { <span style="color: rgb(50, 144, 187)">ciro_bozza</span>[<span
+                        style="color: rgb(212, 133, 41)">dev</span>]
+                    }
+                </a>
 
 
                 <ul class="navbar-nav d-flex flex-row">
                     <!-- Text -->
                     <li class="nav-item me-3 me-lg-0">
                         <a class="nav-link btn menutag" href="#projects" rel="nofollow">[ Work ]
-            </a>
+                        </a>
                     </li>
                     <li class="nav-item me-3 me-lg-0">
                         <a class="nav-link" href="https://www.linkedin.com/in/tony-bozza-0128b2232/" rel="nofollow" target="_blank">
@@ -67,7 +69,7 @@
                         <h1 class="mb-3">I welcome you, stranger_</h1>
                         <h5 class="mb-4 fst-italic">"All I know is that I know nothing." - Socrates -</h5>
                         <a class="btn btn-outline-light btn-lg m-2" href="#contact" role="button" rel="nofollow">Contact
-              me</a>
+                            me</a>
                         <a class="btn btn-outline-light btn-lg m-2" href="https://github.com/toNy5oo?tab=repositories" target="_blank" role="button">Check out my Github</a>
                     </div>
                 </div>
@@ -169,45 +171,56 @@
                     </div>
                 </div>
                 <a href="https://github.com/toNy5oo?tab=repositories" target="_blank"><button type="button"
-            class="btn btn btn-outline-light mt-4 theme" data-mdb-ripple-color="dark">Check
-            other projects on my repository</button></a>
+                        class="btn btn btn-outline-light mt-4 theme" data-mdb-ripple-color="dark">Check
+                        other projects on my repository</button></a>
             </section>
-            <!--Section: Content-->
+
+            <!--Section: Contact Form-->
 
             <hr class="my-5" />
 
-            <!--Section: Content-->
+            <!-- Success message -->
+            <section class="mb-5 text-center" id="success">
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 p-4 my-4">
+                        <p class="mb-4" id="message_status"></p>
+                        <button type="submit" class="btn btn-outline-light btn-block mb-4" id="new_message" data-mdb-ripple-color="light">Send another message</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
             <section class="mb-5" id="contact">
                 <h4 class="mb-5 text-center"><strong>Get in touch</strong></h4>
 
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-6">
-                        <form>
+                        <form id="contact-form">
+                            <input type="hidden" name="contact_number">
                             <!-- Name input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="form_name" class="form-control" />
+                                <input type="text" id="form_name" class="form-control" name="user_name" />
                                 <label class="form-label" for="form_name">Name</label>
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form_email" class="form-control" />
+                                <input type="email" id="form_email" class="form-control" name="user_email" />
                                 <label class="form-label" for="form_email">Email address</label>
                             </div>
 
                             <!-- Message input -->
                             <div class="form-outline mb-4">
-                                <textarea class="form-control" id="form_message" rows="4"></textarea>
+                                <textarea class="form-control" id="form_message" rows="4" name="message"></textarea>
                                 <label class="form-label" for="form_message">Message</label>
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-outline-light btn-block mb-4">Send</button>
+                            <button type="submit" class="btn btn-outline-light btn-block mb-4" id="send_button">Send</button>
                         </form>
                     </div>
                 </div>
             </section>
-            <!--Section: Content-->
         </div>
     </main>
     <!--Main layout-->
@@ -232,9 +245,12 @@
         </div>
 
     </footer>
+
     <!--Footer-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/mdb.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
 </body>
 
 </html>
