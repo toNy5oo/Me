@@ -6,6 +6,7 @@
 
 const MESSAGE_SUCCESS = "Your message has been sent. A trained pigeon will deliver it soon. I'll do my best to answer as soon as I'll have fed my fellow bird."
 const MESSAGE_FAILURE = "There was a problem. Please try again to send a message. If the error persist, please consider sending a message using social media."
+const FADING_TIME = 250;
 
 $(document).ready(function() {
     //Hide the success message
@@ -25,14 +26,14 @@ $(document).ready(function() {
 
         $('#message_status').text(msg)
 
-        $('#contact').fadeOut(250, function() {
-            $('#success').fadeIn(250)
+        $('#contact').fadeOut(FADING_TIME, function() {
+            $('#success').fadeIn(FADING_TIME)
         })
         $('#new_message').click(function(e) {
             e.preventDefault();
             resetForm();
-            $('#success').fadeOut(250, function() {
-                $('#contact').fadeIn(250)
+            $('#success').fadeOut(FADING_TIME, function() {
+                $('#contact').fadeIn(FADING_TIME)
             })
         })
     }
